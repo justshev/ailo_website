@@ -25,22 +25,22 @@ export default function Navbar() {
       <div className="hidden lg:flex nav-links">
         <ul className="flex space-x-4 justify-center items-center">
           <li>
-            <Link href="/" className="hover:text-gray-300">
+            <Link href="/" className="hover:text-gray-300 flip-hover">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-gray-300">
+            <Link href="/about" className="hover:text-gray-300 flip-hover">
               About
             </Link>
           </li>
           <li>
-            <Link href="/services" className="hover:text-gray-300">
+            <Link href="/services" className="hover:text-gray-300 flip-hover">
               Services
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-gray-300">
+            <Link href="/contact" className="hover:text-gray-300 flip-hover">
               Contact
             </Link>
           </li>

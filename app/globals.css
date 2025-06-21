@@ -89,6 +89,16 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+.flip-hover {
+  display: inline-block;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.flip-hover:hover {
+  transform: rotateX(180deg);
+}
 
 @media (max-width: 1024px) {
   .navbar {

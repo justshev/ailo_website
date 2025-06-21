@@ -8,7 +8,7 @@ export default function Hero() {
   };
   return (
     <div>
-      <Aurora colorStops={["#643d8e", "#000000", "#ffffff"]} />
+      <Aurora colorStops={["#643d8e", "#000000", "#b80d00"]} />
       <SplitText
         text="Hello, GSAP!"
         className="text-2xl font-semibold text-center"

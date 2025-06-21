@@ -3,11 +3,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-// const montserrat = Montserrat({
-//   subsets: ["latin"],
-//   weight: ["400", "500", "600", "700"],
-// });
-const inter = Rubik({
+const rubik = Rubik({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -24,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.className} antialiased`}>
+      <body className={` ${rubik.className} antialiased`}>
         <Navbar />
         <div className="">{children}</div>
       </body>

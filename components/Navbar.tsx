@@ -8,7 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar text-white py-5 px-8 flex justify-between items-center shadow-md relative z-50">
+    <nav className="navbar text-white py-4 px-8 flex justify-between items-center shadow-md relative z-50">
       <div className="logo-brand text-2xl font-bold">
         <Link href="/">AILO</Link>
       </div>

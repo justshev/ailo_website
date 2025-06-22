@@ -7,7 +7,7 @@ export default function Hero() {
       <Aurora colorStops={["#643d8e", "#000000", "#b80d00"]} />
       <div className="hero-text-content mt-10 flex justify-center items-center flex-col text-center">
         <p>
-          Our work and stuff up to 100+ projects.{" "}
+          Total work and stuff up to 100+ projects.{" "}
           <span className="ml-2 mr-1">Read more </span> <span> &#8594; </span>
         </p>
         <div className="main-title-hero ">

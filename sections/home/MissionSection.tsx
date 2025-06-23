@@ -15,8 +15,11 @@ export default function MissionSection() {
             </GradientText>
           </div>
           <div className="mission-content">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero,
-            expedita.
+            Bringing speed and transparency{" "}
+            <span className="mission-content-span">
+              {" "}
+              to healthcare payments
+            </span>
           </div>
         </div>
         <div className="right-side-mission">

@@ -1,4 +1,5 @@
 import GradientText from "@/components/GradientText";
+import DecryptedText from "@/components/DecryptedText";
 
 export default function InnovationResearch() {
   return (
@@ -15,13 +16,35 @@ export default function InnovationResearch() {
             </GradientText>
           </div>
           <div className="innovation-desc">
-            <p className="first-desc">Claim Acceleration.</p>
-            <p className="second-desc">Lightning fast payments</p>
+            <div>
+              <DecryptedText
+                text="Customize me."
+                speed={100}
+                maxIterations={20}
+                characters="ABCD1234!?"
+                className="revealed first-desc"
+                parentClassName="all-letters first-desc"
+                encryptedClassName="encrypted"
+                animateOn="view"
+              />
+            </div>
+            <div>
+              <DecryptedText
+                text="Bring the future."
+                speed={100}
+                maxIterations={20}
+                characters="ABCD1234!?"
+                className="revealed second-desc"
+                parentClassName="all-letters second-desc"
+                encryptedClassName="encrypted"
+                animateOn="view"
+              />
+            </div>
           </div>
           <div className="innovation-badge-container"></div>
         </div>
         <div className="right-side-innovation">
-          <div className="innovation-image"></div>
+          <div className="innovation-image-container"></div>
         </div>
       </div>
     </div>

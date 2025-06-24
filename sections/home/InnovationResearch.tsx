@@ -1,5 +1,6 @@
 import GradientText from "@/components/GradientText";
 import DecryptedText from "@/components/DecryptedText";
+import WorkList from "@/components/WorkList";
 
 export default function InnovationResearch() {
   return (
@@ -41,7 +42,24 @@ export default function InnovationResearch() {
               />
             </div>
           </div>
-          <div className="innovation-badge-container"></div>
+          <div className="innovation-badge-container gap-30">
+            <WorkList
+              badge_title="Error Detection"
+              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
+            />
+            <WorkList
+              badge_title="Error Detection"
+              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
+            />
+            <WorkList
+              badge_title="Error Detection"
+              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
+            />
+            <WorkList
+              badge_title="Error Detection"
+              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
+            />
+          </div>
         </div>
         <div className="right-side-innovation">
           <div className="innovation-image-container"></div>

@@ -1,6 +1,7 @@
 import GradientText from "@/components/GradientText";
 import DecryptedText from "@/components/DecryptedText";
 import WorkList from "@/components/WorkList";
+import Image from "next/image";
 
 export default function InnovationResearch() {
   return (
@@ -62,7 +63,16 @@ export default function InnovationResearch() {
           </div>
         </div>
         <div className="right-side-innovation">
-          <div className="innovation-image-container"></div>
+          <div className="innovation-image-container">
+            <Image
+              src={"/test.jpg"}
+              alt="Innovation Research"
+              className="innovation-image"
+              width={900}
+              height={500}
+              priority
+            />
+          </div>
         </div>
       </div>
     </div>

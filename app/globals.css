@@ -215,6 +215,7 @@ body {
   padding-top: 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   padding-bottom: 20px;
 }
@@ -237,11 +238,10 @@ body {
   line-height: 45px;
 }
 
-.innovation-image-container {
-  width: 500px;
-  height: 600px;
-
-  background-color: #0a0a0a;
+.innovation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -268,4 +268,52 @@ body {
 .badge-desc {
   margin-top: 5px;
   width: 200px;
+}
+
+@media (max-width: 1200px) {
+  .innovation-research-container {
+    flex-direction: column;
+    align-items: start;
+  }
+  .innovation-image-container {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-title-hero {
+    font-size: 3rem;
+    max-width: 80%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .sec-title-hero {
+    max-width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mission-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .mission-content {
+    font-size: 2rem;
+    line-height: 35px;
+    margin-bottom: 20px;
+    max-width: 90%;
+  }
+
+  .mission-desc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 780px) {
+  .innovation-image-container {
+    margin-top: 40px;
+  }
 }

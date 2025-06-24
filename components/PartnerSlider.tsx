@@ -16,13 +16,13 @@ export default function PartnerSlider() {
       {/* Fade kiri */}
 
       {/* Track */}
-      <div className="flex gap-12 animate-marquee whitespace-nowrap">
+      <div className="flex gap-12 animate-marquee whitespace-nowrap track">
         {repeated.map((logo, i) => (
           <Image
             key={i}
             src={logo}
             alt={`logo-${i}`}
-            width={100}
+            width={50}
             height={50}
             className="object-contain h-auto"
           />

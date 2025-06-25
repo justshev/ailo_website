@@ -1,10 +1,9 @@
-"use client";
 import Aurora from "@/components/Aurora";
 import GradientText from "@/components/GradientText";
 export default function Hero() {
   return (
     <div>
-      <Aurora colorStops={["#643d8e", "#000000", "#b80d00"]} />
+      <Aurora colorStops={["#643d8e", "#000000", "#4079ff"]} />
       <div className="hero-text-content mt-10 flex justify-center items-center flex-col text-center">
         <p>
           Total work and stuff up to 100+ projects.{" "}

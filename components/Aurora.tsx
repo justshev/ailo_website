@@ -1,3 +1,7 @@
+"use client";
+// This component renders an aurora effect using OGL (OpenGL for Web)
+// It creates a mesmerizing aurora animation with customizable color stops, amplitude, and blend settings.
+
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 

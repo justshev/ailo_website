@@ -324,7 +324,7 @@ body {
   padding-top: 150px;
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
 }
 
 .project-section {
@@ -419,4 +419,59 @@ body {
     margin-bottom: 20px;
     max-width: 90%;
   }
+}
+
+.our-team-container {
+  background-color: #0a0a0a;
+}
+
+.our-team-content-container {
+  width: 80%;
+
+  margin: auto;
+  border: 2px solid #303030;
+  margin-top: 80px;
+  border-radius: 20px;
+}
+
+.our-team-content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.our-team-title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.our-team-subtitle {
+  font-size: 1.2rem;
+  color: #97a2a8;
+  margin-top: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.our-team-explore-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(144, 168, 239, 0.8) 0%,
+    rgba(22, 25, 203, 0.8) 100%
+  );
+  color: white;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 30px;
 }

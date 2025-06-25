@@ -22,7 +22,7 @@ export default function ProjectsSection() {
         <div className="right-side-project">
           <div className="innovation-title mb-8">
             <GradientText
-              colors={["#ffffff", "#4079ff", "#3c32a8", "#4079ff", "#ffffff"]}
+              colors={["#3c32a8", "#4079ff", "#b80d00", "#4079ff", "#3c32a8"]}
               showBorder={false}
               className="custom-class"
             >

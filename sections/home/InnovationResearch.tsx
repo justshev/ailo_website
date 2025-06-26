@@ -1,7 +1,9 @@
 import GradientText from "@/components/GradientText";
 import DecryptedText from "@/components/DecryptedText";
 import WorkList from "@/components/WorkList";
-import Image from "next/image";
+import { LuBrainCircuit } from "react-icons/lu";
+import { MdRemoveRedEye } from "react-icons/md";
+import { FiBarChart2 } from "react-icons/fi";
 
 export default function InnovationResearch() {
   return (
@@ -10,7 +12,13 @@ export default function InnovationResearch() {
         <div className="left-side-innovation">
           <div className="innovation-title mb-8">
             <GradientText
-              colors={["#ffffff", "#b6252a", "#ed1e28", "#b6252a", "#ffffff"]}
+              colors={[
+                "#ffffff",
+                "#BAA5FFFF",
+                "#BAA5FFFF",
+                "#8865FCFF",
+                "#ffffff",
+              ]}
               showBorder={false}
               className="custom-class"
             >
@@ -44,34 +52,71 @@ export default function InnovationResearch() {
             </div>
           </div>
           <div className="innovation-badge-container gap-30">
+            <div className="work-list-container flex  items-center gap-10 ">
+              <div className="left-side">
+                <div className="vertical-dashed-line"></div>
+                <hr />
+              </div>
+              <div className="right-side">
+                <div className="badge-icon-container flex items-center justify-center">
+                  <LuBrainCircuit color="#404141FF" size={20} />
+                </div>
+                <div className="badge-title text-black text-xl">NLP</div>
+                <div className="badge-desc break-words whitespace-normal text-gray-400 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Odit, temporibus.
+                </div>
+              </div>
+            </div>
+            <div className="work-list-container flex  items-center gap-10 ">
+              <div className="left-side">
+                <div className="vertical-dashed-line"></div>
+                <hr />
+              </div>
+              <div className="right-side">
+                <div className="badge-icon-container flex items-center justify-center">
+                  <MdRemoveRedEye color="#404141FF" size={20} />
+                </div>
+                <div className="badge-title text-black text-xl">
+                  Computer Vision
+                </div>
+                <div className="badge-desc break-words whitespace-normal text-gray-400 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Odit, temporibus.
+                </div>
+              </div>
+            </div>
+            <div className="work-list-container flex  items-center gap-10 ">
+              <div className="left-side">
+                <div className="vertical-dashed-line"></div>
+                <hr />
+              </div>
+              <div className="right-side">
+                <div className="badge-icon-container flex items-center justify-center">
+                  <FiBarChart2 color="#404141FF" size={20} />
+                </div>
+                <div className="badge-title text-black text-xl">
+                  Computer Vision
+                </div>
+                <div className="badge-desc break-words whitespace-normal text-gray-400 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Odit, temporibus.
+                </div>
+              </div>
+            </div>
             <WorkList
-              badge_title="Error Detection"
+              badge_title="4G AI"
               badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
             />
             <WorkList
-              badge_title="Error Detection"
-              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
-            />
-            <WorkList
-              badge_title="Error Detection"
-              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
-            />
-            <WorkList
-              badge_title="Error Detection"
+              badge_title="P&O"
               badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
             />
           </div>
         </div>
         <div className="right-side-innovation">
-          <div className="innovation-image-container">
-            <Image
-              src={"/test.jpg"}
-              alt="Innovation Research"
-              className="innovation-image"
-              width={900}
-              height={500}
-              priority
-            />
+          <div className="innovation-video-container">
+            <video src="/rnd.mp4" autoPlay muted loop></video>
           </div>
         </div>
       </div>

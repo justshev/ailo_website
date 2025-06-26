@@ -1,22 +1,13 @@
 import GradientText from "@/components/GradientText";
 import CountUp from "@/components/CountUp";
 
-import Image from "next/image";
-
 export default function ProjectsSection() {
   return (
     <div className="project-section">
       <div className="projects-section-container">
         <div className="left-side-project">
-          <div className="innovation-image-container">
-            <Image
-              src={"/test.jpg"}
-              alt="Innovation Research"
-              className="project-image"
-              width={500}
-              height={500}
-              priority
-            />
+          <div className="project-video-container">
+            <video src="/project.mp4" autoPlay muted loop></video>
           </div>
         </div>
         <div className="right-side-project">

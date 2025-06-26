@@ -214,7 +214,7 @@ body {
   margin: auto;
   padding-top: 100px;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
 
   padding-bottom: 20px;
@@ -268,16 +268,6 @@ body {
 .badge-desc {
   margin-top: 5px;
   width: 200px;
-}
-
-@media (max-width: 1200px) {
-  .innovation-research-container {
-    flex-direction: column;
-    align-items: start;
-  }
-  .innovation-image-container {
-    margin-top: 40px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -396,9 +386,20 @@ body {
     padding-top: 50px;
     align-items: start;
   }
+  .project-sub-desc {
+    margin-top: 5px;
+  }
+
+  .button-explore-project {
+    margin-top: 20px;
+  }
 
   .right-side-project {
+    order: 1;
     margin-left: 0px;
+  }
+  .left-side-project {
+    order: 2;
   }
   /* .innovation-image-container {
     margin-top: 40px;
@@ -407,15 +408,12 @@ body {
 
 @media (max-width: 700px) {
   .first-desc-project {
-    font-size: 2rem;
     line-height: 10px;
     margin-bottom: 20px;
     max-width: 100%;
   }
 
   .second-desc-project {
-    font-size: 2rem;
-
     margin-bottom: 20px;
     max-width: 90%;
   }
@@ -474,4 +472,102 @@ body {
   font-weight: 500;
   font-size: 16px;
   margin-top: 30px;
+}
+
+.contact-us-container {
+  width: 80%;
+  margin: auto;
+  padding-top: 200px;
+
+  padding-bottom: 80px;
+}
+
+.first-title-contact {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 25px;
+}
+.second-title-contact {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #97a2a8;
+}
+
+.button-container-contact {
+  display: flex;
+  margin-top: 40px;
+}
+
+.button-contact-us {
+  background: linear-gradient(
+    90deg,
+    rgba(92, 123, 214, 0.8) 0%,
+    rgba(22, 25, 203, 0.8) 100%
+  );
+  color: white;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.button-explore-contact {
+  color: white;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #919191;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.innovation-video-container video {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 90px;
+}
+
+.project-video-container video {
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 1200px) {
+  .innovation-research-container {
+    flex-direction: column;
+    align-items: start;
+  }
+  .innovation-image-container {
+    margin-top: 40px;
+  }
+  .innovation-video-container video {
+    width: 50%;
+    height: 50%;
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  .project-video-container video {
+    width: 50%;
+    height: 50%;
+    margin-left: 0px;
+    margin-top: 50px;
+  }
 }

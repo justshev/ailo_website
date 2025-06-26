@@ -7,7 +7,7 @@ export default function OurTeam() {
       <Aurora colorStops={["#4079ff", "#ffffff", "#4079ff"]} />
       <div className="our-team-content-container">
         <div style={{ height: "500px", position: "relative" }}>
-          <CircularGallery bend={-3} textColor="#ffffff" borderRadius={0.05} />
+          <CircularGallery bend={-1} textColor="#ffffff" borderRadius={0.05} />
         </div>
         <div className="our-team-content-text">
           <div className="our-team-title">

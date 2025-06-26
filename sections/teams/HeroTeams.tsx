@@ -1,6 +1,8 @@
 import Aurora from "@/components/Aurora";
 import GradientText from "@/components/GradientText";
 import ChromaGrid from "@/components/ChromaGrid";
+import Lectures from "@/components/Lectures";
+import Students from "@/components/Students";
 const items = [
   {
     image: "https://i.pravatar.cc/300?img=1",
@@ -64,6 +66,12 @@ export default function HeroTeams() {
             />
           </div>
         </div>
+      </div>
+      <div className="list-lectures-container">
+        <Lectures />
+      </div>
+      <div className="list-students-container">
+        <Students />
       </div>
     </div>
   );

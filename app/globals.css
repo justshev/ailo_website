@@ -591,3 +591,13 @@ body {
 .ourteam-pages-chromagrid {
   background-color: #0a0a0a;
 }
+
+.list-lectures-container {
+  width: 90%;
+  margin: auto;
+}
+
+.list-students-container {
+  width: 90%;
+  margin: auto;
+}

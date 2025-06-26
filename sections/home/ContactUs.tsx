@@ -29,8 +29,8 @@ export default function ContactUs() {
         className="absolute bottom-[-80px] left-1/2 -translate-x-1/2 w-[800px] h-[200px] rounded-full pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(198,255,0,0.3) 0%, transparent 70%)",
-          filter: "blur(60px)",
+            "radial-gradient(circle, rgba(3,60,202,0.8) 0%, transparent 50%)",
+          filter: "blur(90px)",
         }}
       />
     </div>

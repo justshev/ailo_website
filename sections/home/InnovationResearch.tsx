@@ -4,7 +4,7 @@ import WorkList from "@/components/WorkList";
 import { LuBrainCircuit } from "react-icons/lu";
 import { MdRemoveRedEye } from "react-icons/md";
 import { FiBarChart2 } from "react-icons/fi";
-
+import { TbReport } from "react-icons/tb";
 export default function InnovationResearch() {
   return (
     <div className="innovation-research-section">
@@ -104,14 +104,41 @@ export default function InnovationResearch() {
                 </div>
               </div>
             </div>
-            <WorkList
-              badge_title="4G AI"
-              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
-            />
-            <WorkList
-              badge_title="P&O"
-              badge_description="hai saya addalah bla bajadjawdawdadaw  dawddawddawdawdawdawdawdaawdawdawdawd awd"
-            />
+
+            <div className="work-list-container flex  items-center gap-10 ">
+              <div className="left-side">
+                <div className="vertical-dashed-line"></div>
+                <hr />
+              </div>
+              <div className="right-side">
+                <div className="badge-icon-container flex items-center justify-center">
+                  <TbReport color="#404141FF" size={20} />
+                </div>
+                <div className="badge-title text-black text-xl">
+                  P&O Research
+                </div>
+                <div className="badge-desc break-words whitespace-normal text-gray-400 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Odit, temporibus.
+                </div>
+              </div>
+            </div>
+            <div className="work-list-container flex  items-center gap-10 ">
+              <div className="left-side">
+                <div className="vertical-dashed-line"></div>
+                <hr />
+              </div>
+              <div className="right-side">
+                <div className="badge-icon-container flex items-center justify-center">
+                  <TbReport color="#404141FF" size={20} />
+                </div>
+                <div className="badge-title text-black text-xl">4G AI</div>
+                <div className="badge-desc break-words whitespace-normal text-gray-400 text-sm">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Odit, temporibus.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="right-side-innovation">

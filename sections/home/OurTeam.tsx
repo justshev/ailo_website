@@ -1,6 +1,7 @@
 import CircularGallery from "@/components/CircularGallery";
 import GradientText from "@/components/GradientText";
 import Aurora from "@/components/Aurora";
+import Link from "next/link";
 export default function OurTeam() {
   return (
     <div className="our-team-container">
@@ -26,7 +27,9 @@ export default function OurTeam() {
             adipisicing elit. Sed, laboriosam!
           </div>
 
-          <div className="our-team-explore-btn">See more</div>
+          <div className="our-team-explore-btn">
+            <Link href={"/teams"}>See more</Link>
+          </div>
         </div>
       </div>
     </div>

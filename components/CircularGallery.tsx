@@ -522,8 +522,8 @@ class App {
         text: "Natalie Diva",
       },
       {
-        image: `./members_students/adilla.png`,
-        text: "Ni Putu Adilla",
+        image: `./members_students/satrioaji.png`,
+        text: "Satrio Aji",
       },
       {
         image: `./members_lecturer/dederohidin.jpeg`,

@@ -23,7 +23,7 @@ export default function ContactUs() {
             <div className="button-contact-us bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg cursor-pointer transition">
               Contact Us
             </div>
-            <div className="button-explore-contact border border-white hover:bg-white hover:text-black text-white px-6 py-3 rounded-lg cursor-pointer transition">
+            <div className="button-explore-contact border border-white  text-white px-6 py-3 rounded-lg cursor-pointer transition">
               Our Projects
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function ContactUs() {
 
       {/* Ambient Light Glow */}
       <div
-        className="absolute bottom-[-80px] left-1/2 -translate-x-1/2 w-[800px] h-[200px] rounded-full pointer-events-none z-0"
+        className="absolute bottom-[-80px] left-1/2 -translate-x-1/2 w-[800px] h-[200px] rounded-full pointer-events-none z-0 glowing"
         style={{
           background:
             "radial-gradient(circle, rgba(3,60,202,0.8) 0%, transparent 50%)",

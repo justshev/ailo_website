@@ -395,12 +395,20 @@ body {
   }
 
   .right-side-project {
-    order: 1;
     margin-left: 0px;
   }
   .left-side-project {
+    margin-bottom: 30px;
+  }
+
+  .left-side-innovation {
     order: 2;
   }
+  .right-side-innovation {
+    order: 1;
+    margin-bottom: 30px;
+  }
+
   /* .innovation-image-container {
     margin-top: 40px;
   } */
@@ -600,4 +608,61 @@ body {
 .list-students-container {
   width: 90%;
   margin: auto;
+}
+
+.glowing {
+  box-shadow: 0 0 20px rgba(3, 60, 202, 0.8);
+  animation: glowing-animation 1.5s infinite alternate;
+}
+@keyframes glowing-animation {
+  from {
+    box-shadow: 0 0 20px rgba(3, 60, 202, 0.8);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(3, 60, 202, 0.8);
+  }
+}
+
+@media (max-width: 1000px) {
+  .our-team-content-container {
+    width: 95%;
+    margin: auto;
+  }
+
+  .our-team-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-top: 0px;
+  }
+  .first-title-contact {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .second-title-contact {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .button-container-contact {
+    flex-direction: column;
+  }
+  .button-contact-us {
+    width: 100%;
+  }
+  .button-explore-contact {
+    width: 100%;
+  }
+
+  .glowing {
+    box-shadow: 0 0 20px rgba(3, 60, 202, 0.8);
+    animation: glowing-animation 1.5s infinite alternate;
+    width: 100%;
+  }
+  @keyframes glowing-animation {
+    from {
+      box-shadow: 0 0 20px rgba(3, 60, 202, 0.8);
+    }
+    to {
+      box-shadow: 0 0 40px rgba(3, 60, 202, 0.8);
+    }
+  }
 }

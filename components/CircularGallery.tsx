@@ -456,7 +456,7 @@ class App {
       bend = 1,
       textColor = "#ffffff",
       borderRadius = 0,
-      font = "bold 30px Figtree",
+      font = "bold 30px Rubik",
     }: AppConfig
   ) {
     document.documentElement.classList.remove("no-js");
@@ -506,52 +506,52 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `https://picsum.photos/seed/1/800/600?grayscale`,
-        text: "Bridge",
+        image: `./members_students/sheva.png`,
+        text: "Sheva Atallah D",
       },
       {
-        image: `https://picsum.photos/seed/2/800/600?grayscale`,
-        text: "Desk Setup",
+        image: `./members_students/rafi.png`,
+        text: "Rafi Athallah",
       },
       {
-        image: `https://picsum.photos/seed/3/800/600?grayscale`,
-        text: "Waterfall",
+        image: `./members_students/novie.png`,
+        text: "Novia Natasya",
       },
       {
-        image: `https://picsum.photos/seed/4/800/600?grayscale`,
-        text: "Strawberries",
+        image: `./members_students/natalie.jpeg`,
+        text: "Natalie Diva",
       },
       {
-        image: `https://picsum.photos/seed/5/800/600?grayscale`,
-        text: "Deep Diving",
+        image: `./members_students/adilla.png`,
+        text: "Ni Putu Adilla",
       },
       {
-        image: `https://picsum.photos/seed/16/800/600?grayscale`,
-        text: "Train Track",
+        image: `./members_lecturer/dederohidin.jpeg`,
+        text: " Dede Rohidin",
       },
       {
-        image: `https://picsum.photos/seed/17/800/600?grayscale`,
-        text: "Santorini",
+        image: `./members_lecturer/dickyhidayat.jpeg`,
+        text: "Dicky Hidayat",
       },
       {
-        image: `https://picsum.photos/seed/8/800/600?grayscale`,
-        text: "Blurry Lights",
+        image: `./members_lecturer/fadhilrozi.jpeg`,
+        text: "Fadhil Rozi",
       },
       {
-        image: `https://picsum.photos/seed/9/800/600?grayscale`,
-        text: "New York",
+        image: `./members_lecturer/indraaulia.png`,
+        text: "Indra Aulia",
       },
       {
-        image: `https://picsum.photos/seed/10/800/600?grayscale`,
-        text: "Good Boy",
+        image: `./members_students/davidchandra.png`,
+        text: "David Chandra",
       },
       {
-        image: `https://picsum.photos/seed/21/800/600?grayscale`,
-        text: "Coastline",
+        image: `./members_students/agnesgabriella.png`,
+        text: "Agnes Gabriella",
       },
       {
-        image: `https://picsum.photos/seed/12/800/600?grayscale`,
-        text: "Palm Trees",
+        image: `./members_students/aurelliafira.png`,
+        text: "Aurellia Fira",
       },
     ];
     const galleryItems = items && items.length ? items : defaultItems;

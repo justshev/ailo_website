@@ -1,11 +1,20 @@
+import GradientText from "@/components/GradientText";
+
 export default function ContactUs() {
   return (
     <div className="relative contact-us-container text-white overflow-hidden">
       {/* Konten */}
       <div className="contact-us-content relative z-10">
         <div className="left-side-contact">
-          <div className="first-title-contact text-4xl font-bold">
-            Ready to Collaborate
+          <div className="first-title-contact ">
+            Ready to{" "}
+            <GradientText
+              colors={["#4079ff", "#4079ff", "#ffffff", "#4079ff", "#4079ff"]}
+              showBorder={false}
+              className="custom-class mr-2 "
+            >
+              Collaborate
+            </GradientText>
           </div>
           <div className="second-title-contact text-gray-400 text-3xl mt-2">
             and more with <span className="text-gray-300">AILO ?</span>

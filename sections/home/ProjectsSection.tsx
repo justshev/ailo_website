@@ -2,6 +2,7 @@ import GradientText from "@/components/GradientText";
 import CountUp from "@/components/CountUp";
 import AnimatedOnScroll from "@/components/AnimatedOnScroll";
 import { ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
 
 export default function ProjectsSection() {
   return (
@@ -117,12 +118,12 @@ export default function ProjectsSection() {
             <AnimatedOnScroll>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                  <span>Explore Projects</span>
+                  <Link href="/projects">Explore Projects</Link>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
 
                 <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 font-semibold rounded-xl transition-all duration-300 hover:bg-blue-50">
-                  View Publications
+                  <Link href={"/publications"}>View Publications</Link>
                 </button>
               </div>
             </AnimatedOnScroll>

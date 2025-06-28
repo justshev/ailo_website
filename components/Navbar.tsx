@@ -3,14 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import Image from "next/image";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar text-white py-4 px-8 flex justify-between items-center shadow-md relative z-50">
       <div className="logo-brand text-2xl font-bold">
-        <Link href="/">AILO</Link>
+        <Image src={"/logoailo.png"} alt="logo" width={100} height={100} />
       </div>
 
       {/* Hamburger Menu - Mobile Only */}

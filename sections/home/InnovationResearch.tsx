@@ -11,7 +11,7 @@ import {
   ArrowRight,
   Play,
 } from "lucide-react";
-
+import Link from "next/link";
 const researchAreas = [
   {
     icon: Brain,
@@ -170,12 +170,12 @@ export default function InnovationResearch() {
             <AnimatedOnScroll>
               <div className="flex flex-col sm:flex-row gap-4 pt-8">
                 <button className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                  <span>View Publications</span>
+                  <Link href={"/publications"}>View Publications</Link>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
 
                 <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-purple-200 font-semibold rounded-xl transition-all duration-300 hover:bg-purple-500/10">
-                  Research Papers
+                  <Link href={"/researcher"}>Explore Researcher </Link>
                 </button>
               </div>
             </AnimatedOnScroll>

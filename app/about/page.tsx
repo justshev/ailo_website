@@ -1,587 +1,454 @@
-import GradientText from "@/components/GradientText";
-import Footer from "@/sections/home/Footer";
-
 import {
   MapPin,
-  Phone,
   Mail,
-  Clock,
-  Users,
+  Phone,
+  Globe,
   Target,
-  Rocket,
+  Eye,
+  Lightbulb,
+  Users,
   Award,
-  Brain,
-  Shield,
-  Zap,
+  Calendar,
 } from "lucide-react";
+import Image from "next/image";
+import AnimatedOnScroll from "@/components/AnimatedOnScroll";
 
-export default function AboutDarkPage() {
+const visionMissionData = [
+  {
+    icon: <Eye className="w-8 h-8" />,
+    title: "Visi",
+    description:
+      "Menjadi pusat penelitian AI terdepan yang mengembangkan teknologi Secure Smart Society untuk transformasi digital yang aman dan berkelanjutan di Indonesia dan dunia.",
+    color: "from-purple-900 to-blue-900",
+  },
+  {
+    icon: <Target className="w-8 h-8" />,
+    title: "Misi",
+    description:
+      "Mengembangkan solusi AI yang SAFE (Secure-Accuracy-Fairness-Explainability) melalui riset kolaboratif, inovasi berkelanjutan, dan komersialisasi teknologi untuk kesejahteraan masyarakat.",
+    color: "from-blue-900 to-teal-900",
+  },
+];
+
+const teamStats = [
+  {
+    number: "50+",
+    label: "Peneliti Ahli",
+    icon: <Users className="w-6 h-6" />,
+  },
+  {
+    number: "100+",
+    label: "Publikasi Ilmiah",
+    icon: <Award className="w-6 h-6" />,
+  },
+  {
+    number: "25+",
+    label: "Proyek Riset",
+    icon: <Lightbulb className="w-6 h-6" />,
+  },
+  {
+    number: "10+",
+    label: "Tahun Pengalaman",
+    icon: <Calendar className="w-6 h-6" />,
+  },
+];
+
+const roadmapPhases = [
+  {
+    year: "2022-2023",
+    title: "Fundamental Research Level",
+    phase: "Research Collection & Collaboration",
+    description:
+      "Pengumpulan dan pemetaan riset peneliti serta memperkuat kerjasama riset internal dan eksternal",
+    color: "bg-green-900/60 border-green-700/50",
+    textColor: "text-green-200",
+  },
+  {
+    year: "2024",
+    title: "Enhancement New Sophistication Method",
+    phase: "Moving Towards Commercialization",
+    description:
+      "Pengembangan metode baru untuk meningkatkan dan memperkuat sistem AI dalam fokus riset Secure Smart Society",
+    color: "bg-emerald-900/60 border-emerald-700/50",
+    textColor: "text-emerald-200",
+  },
+  {
+    year: "2025",
+    title: "Research Adoption",
+    phase: "Implementation Phase",
+    description:
+      "Penerapan hasil riset bidang AI dalam fokus riset bidang Secure Smart Society",
+    color: "bg-blue-900/60 border-blue-700/50",
+    textColor: "text-blue-200",
+  },
+  {
+    year: "2026",
+    title: "Research Recognition",
+    phase: "Recognition Phase",
+    description:
+      "Pengakuan hasil riset bidang AI dalam fokus riset bidang Secure Smart Society",
+    color: "bg-amber-900/60 border-amber-700/50",
+    textColor: "text-amber-200",
+  },
+  {
+    year: "2027",
+    title: "Research Commercialization",
+    phase: "Commercialization Phase",
+    description:
+      "Melakukan komersialisasi hasil penelitian bidang AI dalam fokus riset bidang Secure Smart Society",
+    color: "bg-teal-900/60 border-teal-700/50",
+    textColor: "text-teal-200",
+  },
+  {
+    year: "2028",
+    title: "National AI-Based Entrepreneurial Research Center",
+    phase: "SAFE AI Implementation",
+    description:
+      "Menjadi National AI-Based Entrepreneurial Research Center yang SAFE-AI",
+    color: "bg-green-900/60 border-green-700/50",
+    textColor: "text-green-200",
+  },
+  {
+    year: "2032",
+    title: "Globalization & Industrial Transformation",
+    phase: "Global Impact",
+    description:
+      "Teknologi yang dihasilkan tim riset CoE AILO mampu mentransformasikan secara global melalui Secure Smart Society",
+    color: "bg-purple-900/60 border-purple-700/50",
+    textColor: "text-purple-200",
+  },
+];
+
+export default function AboutPage() {
   return (
-    <div className="">
-      <div className="min-h-screen bg-black text-white ">
-        {/* Hero Section */}
-        <section className="relative py-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-black via-gray-900 to-purple-900">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 mb-6 text-purple-400 border border-purple-400/30 bg-purple-900/20 backdrop-blur-sm rounded-full">
-              <Brain className="w-4 h-4 mr-2" />
+    <div className="min-h-screen bg-black">
+      <div className="container mx-auto px-6 pt-40 pb-20">
+        {/* Header Section */}
+        <AnimatedOnScroll>
+          <div className="text-center mb-20">
+            <div className="bg-purple-900/30 border border-purple-700/50 rounded-full text-sm font-medium text-purple-200 inline-flex items-center gap-2 px-4 py-2 mb-6">
+              <Users className="w-4 h-4" />
               Tentang Kami
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
-              Membangun Masa Depan
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent block">
-                Bersama AI Innovation
-              </span>
+            <h1 className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-blue-200 mb-8 tracking-tight">
+              About Us
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
-              Kami adalah perusahaan riset AI terdepan yang berkomitmen
-              menciptakan teknologi
-              <span className="text-purple-400 font-medium">
-                {" "}
-                Secure Smart Society{" "}
-              </span>
-              melalui inovasi berkelanjutan dan penelitian mendalam.
+            <p className="text-xl text-slate-400 max-w-4xl mx-auto leading-relaxed">
+              Pusat penelitian AI terdepan yang berfokus pada pengembangan
+              teknologi Secure Smart Society untuk masa depan yang lebih aman
+              dan cerdas.
             </p>
-            <div className="mt-8 flex justify-center">
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <div className="flex items-center">
-                  <Shield className="w-4 h-4 mr-2 text-green-400" />
-                  Secure
-                </div>
-                <div className="flex items-center">
-                  <Target className="w-4 h-4 mr-2 text-blue-400" />
-                  Accurate
-                </div>
-                <div className="flex items-center">
-                  <Users className="w-4 h-4 mr-2 text-purple-400" />
-                  Fair
-                </div>
-                <div className="flex items-center">
-                  <Zap className="w-4 h-4 mr-2 text-yellow-400" />
-                  Explainable
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
+        </AnimatedOnScroll>
 
         {/* About Us Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-                  Tentang <span className="text-purple-400">Kami</span>
-                </h2>
-                <div className="space-y-6 text-gray-300 leading-relaxed">
-                  <p className="text-lg font-light">
-                    Didirikan dengan visi revolusioner untuk mengembangkan AI
-                    yang aman dan dapat dipercaya, kami telah menjadi pionir
-                    dalam penelitian{" "}
-                    <span className="text-purple-400 font-medium">
-                      Artificial Intelligence
-                    </span>
-                    di Indonesia dengan fokus pada Secure Smart Society.
+        <AnimatedOnScroll>
+          <div className="mb-20">
+            <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-8 md:p-12">
+              <h2 className="text-4xl font-bold text-white mb-8">
+                Tentang Kami
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                    Kami adalah tim peneliti dan pengembang AI yang berdedikasi
+                    untuk menciptakan solusi teknologi yang aman, akurat, adil,
+                    dan dapat dijelaskan. Dengan fokus pada Secure Smart
+                    Society, kami berkomitmen untuk mengembangkan AI yang tidak
+                    hanya canggih, tetapi juga bertanggung jawab.
                   </p>
-                  <p className="font-light">
-                    Perjalanan kami dimulai dari komitmen sederhana namun
-                    mendalam: menciptakan teknologi AI yang tidak hanya canggih,
-                    tetapi juga aman, adil, dan dapat dijelaskan. Hari ini, kami
-                    telah berkembang menjadi pusat penelitian AI terdepan dengan
-                    kolaborasi internasional.
-                  </p>
-                  <p className="font-light">
-                    Tim multidisipliner kami terdiri dari para peneliti, data
-                    scientist, dan engineer berpengalaman yang berdedikasi
-                    mengembangkan solusi AI yang memberikan dampak positif bagi
-                    masyarakat global.
+                  <p className="text-slate-300 text-lg leading-relaxed">
+                    Sejak didirikan, kami telah menghasilkan berbagai inovasi
+                    dalam bidang AI untuk pembelajaran dan optimisasi, dengan
+                    penerapan di berbagai sektor mulai dari pendidikan,
+                    kesehatan, hingga industri.
                   </p>
                 </div>
-              </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-black via-gray-900 to-purple-900 rounded-3xl p-8 shadow-2xl">
-                  <div className="grid grid-cols-2 gap-8">
-                    <div className="text-center">
-                      <div className="flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4 mx-auto backdrop-blur-sm">
-                        <Users className="w-8 h-8 text-white" />
+                <div className="grid grid-cols-2 gap-4">
+                  {teamStats.map((stat, index) => (
+                    <div
+                      key={index}
+                      className="bg-slate-800/50 border border-slate-600/50 rounded-xl p-6 text-center"
+                    >
+                      <div className="text-purple-400 mb-2 flex justify-center">
+                        {stat.icon}
                       </div>
-                      <div className="text-3xl font-black text-white">10K+</div>
-                      <div className="text-sm text-white/80 font-medium">
-                        Research Citations
+                      <div className="text-3xl font-bold text-white mb-1">
+                        {stat.number}
                       </div>
+                      <div className="text-slate-400 text-sm">{stat.label}</div>
                     </div>
-                    <div className="text-center">
-                      <div className="flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4 mx-auto backdrop-blur-sm">
-                        <Award className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="text-3xl font-black text-white">50+</div>
-                      <div className="text-sm text-white/80 font-medium">
-                        AI Publications
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4 mx-auto backdrop-blur-sm">
-                        <Rocket className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="text-3xl font-black text-white">100+</div>
-                      <div className="text-sm text-white/80 font-medium">
-                        AI Models Deployed
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4 mx-auto backdrop-blur-sm">
-                        <Brain className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="text-3xl font-black text-white">4+</div>
-                      <div className="text-sm text-white/80 font-medium">
-                        Years Innovation
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedOnScroll>
 
         {/* Vision & Mission Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Visi & <span className="text-purple-400">Misi</span> Kami
-              </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg font-light">
-                Komitmen kami untuk menciptakan revolusi AI yang aman dan
-                berdampak positif
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-10">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 group rounded-2xl p-8">
-                <div className="text-center pb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Target className="w-10 h-10 text-white" />
+        <AnimatedOnScroll>
+          <div className="mb-20">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Visi & Misi
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {visionMissionData.map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${item.color} p-8`}
+                >
+                  <div className="absolute inset-0 bg-black/20" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16" />
+                  <div className="relative z-10">
+                    <div className="text-white mb-4">{item.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {item.title}
+                    </h3>
+                    <p className="text-white/90 leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="text-3xl text-blue-400 font-bold">Visi</h3>
                 </div>
-                <div className="text-center">
-                  <p className="text-gray-300 leading-relaxed text-lg font-light">
-                    Menjadi pusat penelitian AI terdepan di Asia Tenggara yang
-                    menghadirkan teknologi
-                    <span className="text-blue-400 font-medium"> SAFE AI </span>
-                    untuk menciptakan Secure Smart Society dan mendorong
-                    transformasi digital berkelanjutan.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 group rounded-2xl p-8">
-                <div className="text-center pb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Rocket className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-3xl text-purple-400 font-bold">Misi</h3>
-                </div>
-                <div>
-                  <ul className="space-y-4 text-gray-300">
-                    <li className="flex items-start">
-                      <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                      <span className="font-light">
-                        Mengembangkan teknologi AI yang secure, accurate, fair,
-                        dan explainable
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                      <span className="font-light">
-                        Membangun kolaborasi penelitian global untuk kemajuan AI
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                      <span className="font-light">
-                        Mendorong inovasi berkelanjutan dalam ekosistem AI
-                        Indonesia
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                      <span className="font-light">
-                        Menciptakan dampak positif melalui implementasi AI yang
-                        bertanggung jawab
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </section>
+        </AnimatedOnScroll>
 
-        {/* Roadmap Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-purple-400 text-xl font-bold mb-4">
-                Research Focus: Secure Smart Society
-              </p>
-              <p className="text-gray-300 max-w-4xl mx-auto text-lg font-light">
-                Roadmap pengembangan penelitian AI kami dengan fokus pada
-                keamanan, akurasi, keadilan, dan transparansi
-              </p>
-            </div>
+        {/* Research Roadmap Section */}
+        <AnimatedOnScroll>
+          <div className="mb-20">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Research Roadmap
+            </h2>
 
-            {/* Fundamental Research Level Phase */}
-            <div className="mb-20">
-              <div className="text-center mb-12">
-                <div className="inline-block border-2 border-gray-600 rounded-2xl px-8 py-4 bg-gray-800/50 backdrop-blur-sm">
-                  <h3 className="text-2xl font-bold text-white">
-                    Fundamental Research Level
-                  </h3>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-10">
-                {/* 2022 */}
-                <div className="shadow-2xl hover:shadow-green-500/20 transition-all duration-500 bg-gradient-to-br from-green-900/30 to-green-800/20 backdrop-blur-sm group rounded-2xl p-8">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-black group-hover:scale-110 transition-transform duration-300">
-                      2022
-                    </div>
-                    <h3 className="text-green-400 text-xl font-bold mb-4">
-                      Research Collection
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 text-center leading-relaxed font-light">
-                      Pengumpulan dan Pemetaan Riset Peneliti Telkom University
-                      bidang AI dalam fokus riset bidang Secure Smart Society
-                    </p>
-                  </div>
-                </div>
-
-                {/* 2023 */}
-                <div className="shadow-2xl hover:shadow-pink-500/20 transition-all duration-500 bg-gradient-to-br from-pink-900/30 to-pink-800/20 backdrop-blur-sm group rounded-2xl p-8">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-black group-hover:scale-110 transition-transform duration-300">
-                      2023
-                    </div>
-                    <h3 className="text-pink-400 text-xl font-bold mb-4">
-                      Research Collaboration & Consolidation
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 text-center leading-relaxed font-light">
-                      Memperkuat kerjasama riset melalui kolaborasi penelitian
-                      internal dan eksternal bidang AI dalam fokus riset bidang
-                      Secure Smart Society
-                    </p>
-                  </div>
-                </div>
+            {/* Roadmap Image */}
+            <div className="mb-12 bg-slate-900/80 border border-slate-700/50 rounded-2xl p-8">
+              <div className="relative w-full h-96 md:h-[500px] rounded-xl overflow-hidden">
+                <Image
+                  src="/roadmap.jpeg"
+                  alt="Research Roadmap - AI for Learning & Optimization"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
 
-            {/* Moving Towards Commercialization Phase */}
-            <div className="mb-20">
-              <div className="text-center mb-12">
-                <div className="inline-block border-2 border-gray-600 rounded-2xl px-8 py-4 bg-gray-800/50 backdrop-blur-sm">
-                  <h3 className="text-2xl font-bold text-white">
-                    Moving Towards Commercialization
-                  </h3>
-                </div>
-              </div>
+            {/* Roadmap Timeline */}
+            <div className="space-y-8">
+              {roadmapPhases.map((phase, index) => (
+                <div key={index} className="relative">
+                  {/* Timeline Line */}
+                  {index !== roadmapPhases.length - 1 && (
+                    <div className="absolute left-8 top-16 w-0.5 h-16 bg-slate-600"></div>
+                  )}
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {/* 2024 */}
-                <div className="shadow-2xl hover:shadow-green-500/30 transition-all duration-500 bg-gradient-to-br from-green-600 to-green-700 text-white group rounded-2xl p-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-black backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                      2024
+                  <div className="flex gap-6">
+                    {/* Timeline Dot */}
+                    <div
+                      className={`flex-shrink-0 w-16 h-16 ${phase.color} rounded-full flex items-center justify-center`}
+                    >
+                      <span className={`font-bold text-sm ${phase.textColor}`}>
+                        {phase.year.split("-")[0]}
+                      </span>
                     </div>
-                    <h3 className="text-white text-sm font-bold mb-4">
-                      Enhancement New Sophistication Method
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-white/90 text-xs text-center leading-relaxed font-light">
-                      Pengembangan metode baru untuk meningkatkan kemampuan
-                      sistem bidang AI dalam fokus riset bidang Secure Smart
-                      Society
-                    </p>
-                  </div>
-                </div>
 
-                {/* 2025 */}
-                <div className="shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 bg-gradient-to-br from-blue-600 to-blue-700 text-white group rounded-2xl p-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-black backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                      2025
+                    {/* Content */}
+                    <div className="flex-1 bg-slate-900/80 border border-slate-700/50 rounded-xl p-6">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <h3 className="text-xl font-bold text-white">
+                          {phase.title}
+                        </h3>
+                        <span
+                          className={`text-sm px-3 py-1 rounded-full ${phase.color} ${phase.textColor}`}
+                        >
+                          {phase.year}
+                        </span>
+                      </div>
+                      <p className="text-slate-400 text-sm mb-2 font-medium">
+                        {phase.phase}
+                      </p>
+                      <p className="text-slate-300 leading-relaxed">
+                        {phase.description}
+                      </p>
                     </div>
-                    <h3 className="text-white text-sm font-bold mb-4">
-                      Research Adoption
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-white/90 text-xs text-center leading-relaxed font-light">
-                      Penerapan hasil riset bidang AI dalam fokus riset bidang
-                      Secure Smart Society
-                    </p>
                   </div>
                 </div>
-
-                {/* 2026 */}
-                <div className="shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 bg-gradient-to-br from-orange-600 to-orange-700 text-white group rounded-2xl p-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-black backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                      2026
-                    </div>
-                    <h3 className="text-white text-sm font-bold mb-4">
-                      Research Recognition
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-white/90 text-xs text-center leading-relaxed font-light">
-                      Pengakuan hasil riset bidang AI dalam fokus riset bidang
-                      Secure Smart Society
-                    </p>
-                  </div>
-                </div>
-
-                {/* 2027 */}
-                <div className="shadow-2xl hover:shadow-teal-500/30 transition-all duration-500 bg-gradient-to-br from-teal-600 to-teal-700 text-white group rounded-2xl p-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-black backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                      2027
-                    </div>
-                    <h3 className="text-white text-sm font-bold mb-4">
-                      Research Commercialization
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-white/90 text-xs text-center leading-relaxed font-light">
-                      Melakukan komersialisasi hasil penelitian bidang AI dalam
-                      fokus riset bidang Secure Smart Society
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* SAFE AI Phase */}
-            <div className="mb-16">
-              <div className="text-center mb-12">
-                <div className="inline-block border-2 border-purple-500 rounded-2xl px-10 py-6 bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-sm">
-                  <h3 className="text-3xl font-black bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                    SAFE (Secure-Accuracy-Fairness-Explainability) AI
-                  </h3>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                {/* 2028 */}
-                <div className="shadow-2xl hover:shadow-green-500/20 transition-all duration-500 bg-gradient-to-br from-green-900/40 to-green-800/30 backdrop-blur-sm group rounded-2xl p-8">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-black group-hover:scale-110 transition-transform duration-300">
-                      2028
-                    </div>
-                    <h3 className="text-green-400 text-lg font-bold mb-4">
-                      National AI-Based Entrepreneurial Research Center
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 text-center leading-relaxed font-light">
-                      Menjadi National AI-Based Entrepreneurial Research Center
-                      yang SAFE-AI
-                    </p>
-                  </div>
-                </div>
-
-                {/* 2032 */}
-                <div className="shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 bg-gradient-to-br from-blue-900/40 to-blue-800/30 backdrop-blur-sm group rounded-2xl p-8">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-black group-hover:scale-110 transition-transform duration-300">
-                      2032
-                    </div>
-                    <h3 className="text-blue-400 text-lg font-bold mb-4">
-                      Globalization & Industrial Transformation
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 text-center leading-relaxed font-light">
-                      Teknologi yang dihasilkan tim riset CoE AILO mampu
-                      mentransformasikan secara global melalui Secure Smart
-                      Society
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </section>
+        </AnimatedOnScroll>
 
         {/* Location Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Lokasi <span className="text-purple-400">Kami</span>
-              </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto text-lg font-light">
-                Kunjungi pusat penelitian AI kami atau hubungi untuk kolaborasi
-                riset
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <div>
-                <div className="shadow-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="mb-6">
-                    <h3 className="flex items-center text-2xl text-white font-bold">
-                      <MapPin className="w-6 h-6 text-purple-400 mr-3" />
-                      Research Center
-                    </h3>
-                  </div>
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <MapPin className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
+        <AnimatedOnScroll>
+          <div className="mb-20">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Lokasi Kami
+            </h2>
+            <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">
+                    Alamat Kantor
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-bold text-white text-lg">Alamat</p>
-                        <p className="text-gray-300 font-light">
-                          Jl. Sudirman No. 123, Blok A Lt. 15
-                          <br />
-                          Jakarta Pusat, DKI Jakarta 10220
-                          <br />
-                          Indonesia
+                        <p className="text-white font-medium">
+                          Gedung Riset AI
+                        </p>
+                        <p className="text-slate-400">
+                          Jl. Teknologi No. 123, Jakarta Selatan
+                        </p>
+                        <p className="text-slate-400">
+                          DKI Jakarta 12345, Indonesia
                         </p>
                       </div>
                     </div>
-
-                    <div className="flex items-start space-x-4">
-                      <Clock className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-bold text-white text-lg">
-                          Jam Operasional
-                        </p>
-                        <p className="text-gray-300 font-light">
-                          Senin - Jumat: 09:00 - 18:00
-                          <br />
-                          Sabtu: 09:00 - 15:00
-                          <br />
-                          Minggu: Tutup
-                        </p>
-                      </div>
+                    <div className="flex items-center gap-3">
+                      <Phone className="w-5 h-5 text-purple-400" />
+                      <span className="text-slate-300">+62 21 1234 5678</span>
                     </div>
-
-                    <div className="pt-6 border-t border-gray-700">
-                      <h4 className="font-bold text-white text-lg mb-4">
-                        Research Labs
-                      </h4>
-                      <div className="space-y-3 text-gray-300 font-light">
-                        <p>• AI Security Lab - Surabaya</p>
-                        <p>• Machine Learning Center - Bandung</p>
-                        <p>• Data Science Hub - Medan</p>
-                      </div>
+                    <div className="flex items-center gap-3">
+                      <Mail className="w-5 h-5 text-purple-400" />
+                      <span className="text-slate-300">info@airesearch.id</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Globe className="w-5 h-5 text-purple-400" />
+                      <span className="text-slate-300">www.airesearch.id</span>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="relative">
-                <div className="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+                {/* Google Maps Embed */}
+                <div className="h-80 rounded-xl overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194637395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sSudirman%20Central%20Business%20District%20(SCBD)!5e0!3m2!1sen!2sid!4v1635724073795!5m2!1sen!2sid"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.2087634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1703123456789!5m2!1sen!2sid"
                     width="100%"
-                    height="400"
-                    style={{
-                      border: 0,
-                      filter: "invert(90%) hue-rotate(180deg)",
-                    }}
+                    height="100%"
+                    style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-96"
+                    className="rounded-xl"
                   ></iframe>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedOnScroll>
 
         {/* Contact Us Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-black via-gray-900 to-purple-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Hubungi <span className="text-purple-400">Kami</span>
-              </h2>
-              <p className="text-purple-100 max-w-3xl mx-auto text-lg font-light">
-                Siap berkolaborasi dalam penelitian AI dan mengembangkan
-                teknologi masa depan bersama
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-10">
-              <div className="shadow-2xl bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 group rounded-2xl p-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Telepon</h3>
-                </div>
-                <div className="text-center">
-                  <p className="text-purple-100 mb-6 font-light">
-                    Hubungi research team kami
+        <AnimatedOnScroll>
+          <div className="mb-20">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Hubungi Kami
+            </h2>
+            <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-8">
+              <div className="grid md:grid-cols-2 gap-12">
+                {/* Contact Info */}
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-6">
+                    Mari Berkolaborasi
+                  </h3>
+                  <p className="text-slate-300 text-lg leading-relaxed mb-8">
+                    Tertarik untuk berkolaborasi dalam penelitian AI atau ingin
+                    mengetahui lebih lanjut tentang solusi kami? Jangan ragu
+                    untuk menghubungi tim kami.
                   </p>
-                  <div className="space-y-3">
-                    <p className="font-bold text-lg">+62 21 1234 5678</p>
-                    <p className="font-bold text-lg">+62 812 3456 7890</p>
-                  </div>
-                </div>
-              </div>
 
-              <div className="shadow-2xl bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 group rounded-2xl p-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                    <Mail className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Email</h3>
-                </div>
-                <div className="text-center">
-                  <p className="text-purple-100 mb-6 font-light">
-                    Kirim proposal penelitian
-                  </p>
-                  <div className="space-y-3">
-                    <p className="font-bold text-lg">research@ailab.com</p>
-                    <p className="font-bold text-lg">collaboration@ailab.com</p>
-                  </div>
-                </div>
-              </div>
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-purple-900/50 border border-purple-700/50 rounded-lg flex items-center justify-center">
+                        <Mail className="w-6 h-6 text-purple-300" />
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">Email</p>
+                        <p className="text-slate-400">research@airesearch.id</p>
+                      </div>
+                    </div>
 
-              <div className="shadow-2xl bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 group rounded-2xl p-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                    <Clock className="w-8 h-8" />
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-blue-900/50 border border-blue-700/50 rounded-lg flex items-center justify-center">
+                        <Phone className="w-6 h-6 text-blue-300" />
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">Telepon</p>
+                        <p className="text-slate-400">+62 21 1234 5678</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-teal-900/50 border border-teal-700/50 rounded-lg flex items-center justify-center">
+                        <Globe className="w-6 h-6 text-teal-300" />
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">Website</p>
+                        <p className="text-slate-400">www.airesearch.id</p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-4">Research Hours</h3>
                 </div>
-                <div className="text-center">
-                  <p className="text-purple-100 mb-6 font-light">
-                    Lab & consultation time
-                  </p>
-                  <div className="space-y-2 font-light">
-                    <p className="text-white">Senin - Jumat</p>
-                    <p className="font-bold text-lg">09:00 - 18:00 WIB</p>
-                    <p>Sabtu: 09:00 - 15:00 WIB</p>
-                  </div>
+
+                {/* Contact Form */}
+                <div>
+                  <form className="space-y-6">
+                    <div>
+                      <label className="block text-white font-medium mb-2">
+                        Nama Lengkap
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50"
+                        placeholder="Masukkan nama lengkap Anda"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-white font-medium mb-2">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50"
+                        placeholder="nama@email.com"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-white font-medium mb-2">
+                        Subjek
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50"
+                        placeholder="Topik yang ingin dibahas"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-white font-medium mb-2">
+                        Pesan
+                      </label>
+                      <textarea
+                        rows={5}
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 resize-none"
+                        placeholder="Tuliskan pesan Anda di sini..."
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-purple-900/80 hover:bg-purple-800/80 text-white border border-purple-700/50 font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+                    >
+                      Kirim Pesan
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-          <div className="footer mt-10">
-            <Footer />
-          </div>
-        </section>
+        </AnimatedOnScroll>
       </div>
     </div>
   );

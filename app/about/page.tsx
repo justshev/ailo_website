@@ -1,4 +1,5 @@
 import GradientText from "@/components/GradientText";
+import Footer from "@/sections/home/Footer";
 
 import {
   MapPin,
@@ -222,11 +223,6 @@ export default function AboutDarkPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block  text-white px-10 py-6 rounded-3xl mb-8 shadow-2xl">
-                <h2 className="text-2xl sm:text-4xl font-black">
-                  ARTIFICIAL INTELLIGENCE FOR LEARNING & OPTIMIZATION
-                </h2>
-              </div>
               <p className="text-purple-400 text-xl font-bold mb-4">
                 Research Focus: Secure Smart Society
               </p>
@@ -581,12 +577,9 @@ export default function AboutDarkPage() {
                 </div>
               </div>
             </div>
-
-            <div className="text-center mt-16">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold px-10 py-4 text-lg rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300">
-                Start AI Research Collaboration
-              </button>
-            </div>
+          </div>
+          <div className="footer mt-10">
+            <Footer />
           </div>
         </section>
       </div>

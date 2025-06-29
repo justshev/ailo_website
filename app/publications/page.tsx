@@ -559,7 +559,6 @@ const publications = [
 // Placeholder Background Component
 const PlaceholderBackground = ({
   category,
-  title,
 }: {
   category: string;
   title: string;
@@ -889,7 +888,7 @@ export default function PublicationsPage() {
 
         {/* Publications Grid */}
         <div className="space-y-6 sm:space-y-8 mb-20">
-          {filteredPublications.map((publication, index) => (
+          {filteredPublications.map((publication) => (
             <AnimatedOnScroll key={publication.id}>
               <div className="group bg-slate-900/80 border border-slate-700/50 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2">
                 <div className="flex flex-col lg:flex-row">

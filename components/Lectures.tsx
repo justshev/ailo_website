@@ -1,6 +1,6 @@
 "use client";
-import { div } from "framer-motion/client";
-import { Mail, GraduationCap, Users, Search } from "lucide-react";
+
+import { GraduationCap, Search } from "lucide-react";
 import { useState } from "react";
 export default function Lectures() {
   // Data dosen peneliti
@@ -259,8 +259,8 @@ export default function Lectures() {
                 <div className="p-8 text-center text-gray-500">
                   <Search className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                   <p>
-                    Tidak ada dosen yang ditemukan dengan kata kunci "
-                    {searchTerm}"
+                    Tidak ada dosen yang ditemukan dengan kata kunci{" "}
+                    {searchTerm}
                   </p>
                 </div>
               )}

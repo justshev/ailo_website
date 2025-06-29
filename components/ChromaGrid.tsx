@@ -1,10 +1,9 @@
 "use client";
 
 import type React from "react";
-import { useRef, useEffect} from "react";
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-
 
 export interface ChromaItem {
   image: string;
@@ -48,31 +47,31 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
 
   const demo: ChromaItem[] = [
     {
-      image: "/members_lecturer/indraaulia.png",
-      title: "Prof. Dr. Suyanto, S.T., M.Sce",
+      image: "/director/profagus.jpeg",
+      title: "Prof. Ir. Agus Pratondo",
       subtitle: "Director of AI Center Telkom University",
-      handle: "@alexrivera",
+      handle: "",
       borderColor: "#4F46E5",
       gradient: "linear-gradient(145deg, #4F46E5, #000)",
-      url: "https://github.com/",
+      url: "https://scholar.google.com/citations?user=6xpIGoIAAAAJ&hl=id",
     },
     {
-      image: "/members_lecturer/indraaulia.png",
-      title: "Suryo Adhi Wibowo, S.T., M.T.,Ph.D.",
+      image: "/director/suryo.jpeg",
+      title: "Suryo Adhi Wibowo",
       subtitle: "Vice Director of AI Center Telkom University",
-      handle: "@jordanchen",
+      handle: "",
       borderColor: "#10B981",
       gradient: "linear-gradient(210deg, #10B981, #000)",
-      url: "https://linkedin.com/in/",
+      url: "https://scholar.google.com/citations?user=DySgkc8AAAAJ&hl=id",
     },
     {
       image: "/members_lecturer/indraaulia.png",
-      title: "Morgan Blake",
-      subtitle: "UI/UX Designer",
-      handle: "@morganblake",
+      title: "Indra Aulia",
+      subtitle: "Manager Interational Research",
+      handle: "",
       borderColor: "#F59E0B",
       gradient: "linear-gradient(165deg, #F59E0B, #000)",
-      url: "https://dribbble.com/",
+      url: "https://scholar.google.co.id/citations?user=JaUFyoAAAAAJ&hl=id",
     },
   ];
 

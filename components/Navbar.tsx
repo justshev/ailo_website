@@ -48,9 +48,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <div className="btn-contact">
-              <Link href="/projects">Jelajahi Project</Link>
-            </div>
+            <Link href={"/projects"} className="btn-contact">
+              <span>Jelajahi Project</span>
+            </Link>
           </li>
         </ul>
       </div>

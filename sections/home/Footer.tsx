@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Company Section */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-medium mb-6">Company</h3>
+            <h3 className="text-white text-lg font-medium mb-6">Structure</h3>
             <div className="space-y-3">
               <Link
                 href="/about"
@@ -16,16 +16,16 @@ export default function Footer() {
                 About us
               </Link>
               <Link
-                href="/blog"
+                href="/projects"
                 className="block text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Blog
+                Projects
               </Link>
               <Link
-                href="/careers"
+                href="/publications"
                 className="block text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Careers
+                Publications
               </Link>
             </div>
           </div>
@@ -55,19 +55,19 @@ export default function Footer() {
 
           {/* Legal Section */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-medium mb-6">Legal</h3>
+            <h3 className="text-white text-lg font-medium mb-6"> Company</h3>
             <div className="space-y-3">
               <Link
-                href="/terms"
+                href="/about#roadmap"
                 className="block text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Terms & Conditions
+                Roadmap
               </Link>
               <Link
-                href="/privacy"
+                href="/about#maps"
                 className="block text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Privacy Policy
+                Locations
               </Link>
             </div>
           </div>

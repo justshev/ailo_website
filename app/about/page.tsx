@@ -216,7 +216,7 @@ export default function AboutPage() {
 
         {/* Research Roadmap Section */}
         <AnimatedOnScroll>
-          <div className="mb-20">
+          <div className="mb-20" id="roadmap">
             <h2 className="text-4xl font-bold text-white text-center mb-12">
               Research Roadmap
             </h2>
@@ -280,7 +280,7 @@ export default function AboutPage() {
 
         {/* Location Section */}
         <AnimatedOnScroll>
-          <div className="mb-20">
+          <div className="mb-20" id="maps">
             <h2 className="text-4xl font-bold text-white text-center mb-12">
               Lokasi Kami
             </h2>

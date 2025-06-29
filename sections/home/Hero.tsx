@@ -37,8 +37,10 @@ export default function Hero() {
         </div>
 
         <p className="text-lg text-gray-400 mt-4 sec-title-hero">
-          AILO adalah Center of Excellence dari Telkom University yang berfokus
-          pada Penelitian dan Pengembangan AI.
+          AILO adalah Center of Excellence dari Telkom University dalam bidang
+          Artificial Intelligence (AI) dan Cyber Security (CS) dengan Prinsip
+          SAFE (Secure, Accurate, Fair and Explainable) AI yang berfokus pada
+          Secure Smart Society
         </p>
 
         <AnimatedOnScroll>

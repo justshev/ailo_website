@@ -15,33 +15,33 @@ import Link from "next/link";
 const researchAreas = [
   {
     icon: Brain,
-    title: "Natural Language Processing",
+    title: "Pemrosesan Bahasa Alami",
     description:
-      "Advanced AI models for understanding and generating human language with state-of-the-art accuracy.",
+      "Model AI canggih untuk memahami dan menghasilkan bahasa manusia dengan akurasi mutakhir.",
     color: "from-purple-500 to-pink-500",
     bgColor: "bg-purple-50",
   },
   {
     icon: Eye,
-    title: "Computer Vision",
+    title: "Visi Komputer",
     description:
-      "Cutting-edge visual recognition systems that interpret and analyze digital images and videos.",
+      "Sistem pengenalan visual terdepan yang mampu menafsirkan dan menganalisis gambar serta video digital.",
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-50",
   },
   {
     icon: BarChart3,
-    title: "Data Analytics",
+    title: "Analitik Data",
     description:
-      "Sophisticated algorithms for extracting meaningful insights from complex datasets and patterns.",
+      "Algoritma canggih untuk mengekstraksi wawasan bermakna dari kumpulan data dan pola yang kompleks.",
     color: "from-green-500 to-emerald-500",
     bgColor: "bg-green-50",
   },
   {
     icon: FileText,
-    title: "Research Publications",
+    title: "Publikasi Riset",
     description:
-      "Peer-reviewed research contributing to the advancement of AI and machine learning technologies.",
+      "Riset yang telah ditinjau sejawat dan berkontribusi pada kemajuan teknologi AI dan machine learning.",
     color: "from-orange-500 to-red-500",
     bgColor: "bg-orange-50",
   },
@@ -49,15 +49,15 @@ const researchAreas = [
     icon: Cpu,
     title: "Edge AI Computing",
     description:
-      "Optimized AI models designed for deployment on edge devices and real-time applications.",
+      "Model AI yang dioptimalkan untuk diterapkan pada perangkat edge dan aplikasi waktu nyata.",
     color: "from-indigo-500 to-purple-500",
     bgColor: "bg-indigo-50",
   },
   {
     icon: Zap,
-    title: "Neural Networks",
+    title: "Jaringan Saraf",
     description:
-      "Deep learning architectures that mimic human brain functionality for complex problem solving.",
+      "Arsitektur deep learning yang meniru fungsi otak manusia untuk pemecahan masalah kompleks.",
     color: "from-yellow-500 to-orange-500",
     bgColor: "bg-yellow-50",
   },
@@ -79,7 +79,7 @@ export default function InnovationResearch() {
             <AnimatedOnScroll>
               <div className="inline-flex items-center px-4 py-2 bg-purple-900/50 border border-purple-500/30 text-purple-300 rounded-full text-sm font-medium mb-6">
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-2 animate-pulse"></span>
-                Innovation Lab
+                Laboratorium Inovasi
               </div>
             </AnimatedOnScroll>
 
@@ -96,16 +96,16 @@ export default function InnovationResearch() {
                   showBorder={false}
                   className="block "
                 >
-                  RESEARCH & PUBLICATIONS
+                  RISET & PUBLIKASI
                 </GradientText>
               </h2>
             </AnimatedOnScroll>
 
             <AnimatedOnScroll>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <div className="text-3xl lg:text-4xl font-semibold text-white">
                   <DecryptedText
-                    text="Pioneering Tomorrow's Technology."
+                    text="Merintis Teknologi Masa Depan."
                     speed={50}
                     maxIterations={15}
                     characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*"
@@ -117,7 +117,7 @@ export default function InnovationResearch() {
                 </div>
                 <div className="text-3xl lg:text-4xl font-semibold text-gray-400">
                   <DecryptedText
-                    text="Shaping the Future of AI."
+                    text="Membentuk Masa Depan AI."
                     speed={50}
                     maxIterations={15}
                     characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*"
@@ -132,10 +132,9 @@ export default function InnovationResearch() {
 
             <AnimatedOnScroll>
               <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
-                Our research division pushes the boundaries of artificial
-                intelligence, developing breakthrough technologies that
-                transform industries and create new possibilities for human-AI
-                collaboration.
+                Divisi riset kami mendorong batas-batas kecerdasan buatan,
+                mengembangkan teknologi terobosan yang mentransformasi industri
+                dan menciptakan kemungkinan baru untuk kolaborasi manusia-AI.
               </p>
             </AnimatedOnScroll>
 
@@ -169,14 +168,20 @@ export default function InnovationResearch() {
 
             <AnimatedOnScroll>
               <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                <button className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                  <Link href={"/publications"}>View Publications</Link>
+                <Link
+                  href={"/publications"}
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                >
+                  <span>Lihat Publikasi</span>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                </Link>
 
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-purple-200 font-semibold rounded-xl transition-all duration-300 hover:bg-purple-500/10">
-                  <Link href={"/researcher"}>Explore Researcher </Link>
-                </button>
+                <Link
+                  href={"/researcher"}
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-purple-200 font-semibold rounded-xl transition-all duration-300 hover:bg-purple-500/10"
+                >
+                  <span>Jelajahi Peneliti </span>
+                </Link>
               </div>
             </AnimatedOnScroll>
           </div>
@@ -195,17 +200,6 @@ export default function InnovationResearch() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 flex items-center space-x-2 text-white">
-                    <Play className="w-4 h-4" />
-                    <span className="text-sm font-medium">
-                      Research in Action
-                    </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
-                    <div className="px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-white text-xs font-medium">
-                      Live Demo
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -213,14 +207,14 @@ export default function InnovationResearch() {
               <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white">50+</div>
-                  <div className="text-xs text-gray-400">Research Papers</div>
+                  <div className="text-xs text-gray-400">Makalah Riset</div>
                 </div>
               </div>
 
               <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white">15+</div>
-                  <div className="text-xs text-gray-400">AI Models</div>
+                  <div className="text-xs text-gray-400">Model AI</div>
                 </div>
               </div>
             </div>
@@ -232,19 +226,19 @@ export default function InnovationResearch() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/10">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">95%</div>
-              <div className="text-sm text-gray-400">Accuracy Rate</div>
+              <div className="text-sm text-gray-400">Tingkat Akurasi</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-sm text-gray-400">Research Lab</div>
+              <div className="text-sm text-gray-400">Lab Riset</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">100+</div>
-              <div className="text-sm text-gray-400">Experiments</div>
+              <div className="text-sm text-gray-400">Eksperimen</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">5★</div>
-              <div className="text-sm text-gray-400">Innovation Score</div>
+              <div className="text-sm text-gray-400">Skor Inovasi</div>
             </div>
           </div>
         </AnimatedOnScroll>

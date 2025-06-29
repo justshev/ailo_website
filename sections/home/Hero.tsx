@@ -1,14 +1,18 @@
 import Aurora from "@/components/Aurora";
 import GradientText from "@/components/GradientText";
 import AnimatedOnScroll from "@/components/AnimatedOnScroll";
+import Link from "next/link";
 export default function Hero() {
   return (
     <div>
       <Aurora colorStops={["#643d8e", "#000000", "#4079ff"]} />
       <div className="hero-text-content mt-10 flex justify-center items-center flex-col text-center">
-        <p>
-          Total work and stuff up to 100+ projects.{" "}
-          <span className="ml-2 mr-1">Read more </span> <span> &#8594; </span>
+        <p className="first-readmore">
+          Total Research dan Publikasi lebih 20+{" "}
+          <Link href={"/researcher"} className="ml-2 mr-1">
+            Lihat selengkapnya{" "}
+          </Link>{" "}
+          <span> &#8594; </span>
         </p>
 
         <div className="main-title-hero ">
@@ -33,12 +37,14 @@ export default function Hero() {
         </div>
 
         <p className="text-lg text-gray-400 mt-4 sec-title-hero">
-          AILO is Center of Excellence from Telkom University that focused on AI
-          Research and Development
+          AILO adalah Center of Excellence dari Telkom University yang berfokus
+          pada Penelitian dan Pengembangan AI.
         </p>
 
         <AnimatedOnScroll>
-          <div className="btn-started">Get Started</div>
+          <a href="#main" className="btn-started">
+            Mulai Sekarang
+          </a>
         </AnimatedOnScroll>
       </div>
     </div>

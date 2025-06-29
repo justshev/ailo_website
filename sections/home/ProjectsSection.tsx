@@ -25,9 +25,7 @@ export default function ProjectsSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 flex items-center space-x-2 text-white">
                     <Play className="w-4 h-4" />
-                    <span className="text-sm font-medium">
-                      Project Showcase
-                    </span>
+                    <span className="text-sm font-medium">Tampilkan</span>
                   </div>
                 </div>
               </div>
@@ -39,33 +37,15 @@ export default function ProjectsSection() {
             <AnimatedOnScroll>
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
-                Portfolio Showcase
+                Portofolio Projects
               </div>
-            </AnimatedOnScroll>
-
-            <AnimatedOnScroll>
-              <h2 className=" font-bold leading-tight">
-                <GradientText
-                  colors={[
-                    "#1e40af",
-                    "#3b82f6",
-                    "#60a5fa",
-                    "#3b82f6",
-                    "#1e40af",
-                  ]}
-                  showBorder={false}
-                  className="block mb-2"
-                >
-                  OUR PROJECTS
-                </GradientText>
-              </h2>
             </AnimatedOnScroll>
 
             <AnimatedOnScroll>
               <div className="space-y-4">
                 <div className="flex items-baseline space-x-3">
                   <span className="text-3xl lg:text-4xl font-semibold text-gray-900">
-                    We have delivered
+                    Kami telah menyelesaikan
                   </span>
                 </div>
 
@@ -101,7 +81,7 @@ export default function ProjectsSection() {
                     showBorder={false}
                     className="text-3xl lg:text-4xl font-semibold"
                   >
-                    Projects
+                    Proyek
                   </GradientText>
                 </div>
               </div>
@@ -109,22 +89,28 @@ export default function ProjectsSection() {
 
             <AnimatedOnScroll>
               <p className="text-lg text-gray-600 leading-relaxed max-w-md">
-                From innovative web applications to cutting-edge mobile
-                solutions, we transform ideas into digital experiences that
-                drive results and exceed expectations.
+                Dari aplikasi web inovatif hingga solusi mobile terkini, kami
+                mewujudkan ide menjadi pengalaman digital yang berdampak dan
+                melampaui ekspektasi.
               </p>
             </AnimatedOnScroll>
 
             <AnimatedOnScroll>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                  <Link href="/projects">Explore Projects</Link>
+                <Link
+                  href={"/projects"}
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                >
+                  <span>Jelajahi Proyek</span>
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                </Link>
 
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 font-semibold rounded-xl transition-all duration-300 hover:bg-blue-50">
-                  <Link href={"/publications"}>View Publications</Link>
-                </button>
+                <Link
+                  href={"/publications"}
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 font-semibold rounded-xl transition-all duration-300 hover:bg-blue-50"
+                >
+                  <span>Lihat Publikasi</span>
+                </Link>
               </div>
             </AnimatedOnScroll>
 
@@ -133,17 +119,15 @@ export default function ProjectsSection() {
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900">98%</div>
-                  <div className="text-sm text-gray-600">
-                    Client Satisfaction
-                  </div>
+                  <div className="text-sm text-gray-600">Kepuasan Klien</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900">24/7</div>
-                  <div className="text-sm text-gray-600">Support</div>
+                  <div className="text-sm text-gray-600">Dukungan</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900">5★</div>
-                  <div className="text-sm text-gray-600">Average Rating</div>
+                  <div className="text-sm text-gray-600">Rating Rata-rata</div>
                 </div>
               </div>
             </AnimatedOnScroll>

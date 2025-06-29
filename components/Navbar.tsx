@@ -31,22 +31,25 @@ export default function Navbar() {
           </li>
           <li>
             <Link href="/about" className="hover:text-gray-300 flip-hover">
-              About
+              Tentang kami
             </Link>
           </li>
           <li>
-            <Link href="/services" className="hover:text-gray-300 flip-hover">
-              Services
+            <Link
+              href="/publications"
+              className="hover:text-gray-300 flip-hover"
+            >
+              Publikasi
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-gray-300 flip-hover">
-              Contact
+            <Link href="/teams" className="hover:text-gray-300 flip-hover">
+              Tim kami
             </Link>
           </li>
           <li>
             <div className="btn-contact">
-              <Link href="/blog">Contact Us</Link>
+              <Link href="/projects">Jelajahi Project</Link>
             </div>
           </li>
         </ul>
@@ -63,23 +66,23 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="/about" onClick={() => setMenuOpen(false)}>
-                About
+                Tentang kami
               </Link>
             </li>
             <li>
-              <Link href="/services" onClick={() => setMenuOpen(false)}>
-                Services
+              <Link href="/publications" onClick={() => setMenuOpen(false)}>
+                Publikasi
               </Link>
             </li>
             <li>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
-                Contact
+              <Link href="/teams" onClick={() => setMenuOpen(false)}>
+                Tim kami
               </Link>
             </li>
             <li>
               <div className="btn-contact w-fit">
-                <Link href="/blog" onClick={() => setMenuOpen(false)}>
-                  Contact Us
+                <Link href="/projects" onClick={() => setMenuOpen(false)}>
+                  Jelajahi Project
                 </Link>
               </div>
             </li>

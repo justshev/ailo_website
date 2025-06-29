@@ -12,24 +12,25 @@ export default function OurTeam() {
         </div>
         <div className="our-team-content-text">
           <div className="our-team-title">
-            <span>Meet our </span>
+            <span>Kenali </span>
             <GradientText
               colors={["#4079ff", "#4079ff", "#ffffff", "#4079ff", "#4079ff"]}
               showBorder={false}
               className="custom-class mr-2 our-team-title"
             >
-              Team
+              Tim Kami
             </GradientText>
           </div>
 
           <div className="our-team-subtitle">
-            We have more 20+ members Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Sed, laboriosam!
+            Kami memiliki lebih dari 20 anggota yang berdedikasi dan
+            berpengalaman di bidangnya, siap berkolaborasi untuk menciptakan
+            inovasi terbaik.
           </div>
 
-          <div className="our-team-explore-btn">
-            <Link href={"/teams"}>See more</Link>
-          </div>
+          <Link href={"/teams"} className="our-team-explore-btn">
+            <span>Lihat Selengkapnya</span>
+          </Link>
         </div>
       </div>
     </div>

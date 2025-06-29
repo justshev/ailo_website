@@ -3,6 +3,7 @@
 :root {
   --background: #0a0a0a; /* hitam */
   --foreground: #ffffff;
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -468,8 +469,7 @@ body {
     rgba(22, 25, 203, 0.8) 100%
   );
   color: white;
-  width: 150px;
-  height: 45px;
+  padding: 12px 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,9 +483,9 @@ body {
 }
 
 .contact-us-container {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  padding-top: 200px;
+  padding-top: 10px;
 
   padding-bottom: 80px;
 }
@@ -494,12 +494,12 @@ body {
   font-size: 3rem;
   font-weight: 500;
   color: #ffffff;
-  line-height: 40px;
+  line-height: 50px;
 }
 .second-title-contact {
   font-size: 3rem;
   font-weight: 500;
-  color: #97a2a8;
+  color: #ffffff;
 }
 
 .button-container-contact {
@@ -514,8 +514,7 @@ body {
     rgba(22, 25, 203, 0.8) 100%
   );
   color: white;
-  width: 150px;
-  height: 45px;
+  padding: 12px 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -525,13 +524,11 @@ body {
   transition: background 0.3s ease, box-shadow 0.3s;
   font-weight: 500;
   font-size: 16px;
-  margin-right: 5px;
 }
 
 .button-explore-contact {
   color: white;
-  width: 150px;
-  height: 45px;
+  padding: 12px 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -670,5 +667,13 @@ body {
 @media (max-width: 700px) {
   .sliderr {
     display: none;
+  }
+
+  .first-readmore {
+    font-size: 10px;
+  }
+
+  .main-title-hero {
+    margin-top: 20px;
   }
 }

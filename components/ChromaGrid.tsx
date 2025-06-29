@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import type React from "react";
+import { useRef, useEffect} from "react";
 import { gsap } from "gsap";
-import "../app/ChromaGrid.css"; // Ensure you have the correct path to your CSS file
+import Image from "next/image";
+
 
 export interface ChromaItem {
   image: string;
@@ -46,7 +48,7 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
 
   const demo: ChromaItem[] = [
     {
-      image: "https://i.pravatar.cc/300?img=8",
+      image: "/members_lecturer/indraaulia.png",
       title: "Prof. Dr. Suyanto, S.T., M.Sce",
       subtitle: "Director of AI Center Telkom University",
       handle: "@alexrivera",
@@ -55,7 +57,7 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
       url: "https://github.com/",
     },
     {
-      image: "https://i.pravatar.cc/300?img=11",
+      image: "/members_lecturer/indraaulia.png",
       title: "Suryo Adhi Wibowo, S.T., M.T.,Ph.D.",
       subtitle: "Vice Director of AI Center Telkom University",
       handle: "@jordanchen",
@@ -64,7 +66,7 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
       url: "https://linkedin.com/in/",
     },
     {
-      image: "https://i.pravatar.cc/300?img=3",
+      image: "/members_lecturer/indraaulia.png",
       title: "Morgan Blake",
       subtitle: "UI/UX Designer",
       handle: "@morganblake",
@@ -73,13 +75,16 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
       url: "https://dribbble.com/",
     },
   ];
+
   const data = items?.length ? items : demo;
 
   useEffect(() => {
     const el = rootRef.current;
     if (!el) return;
+
     setX.current = gsap.quickSetter(el, "--x", "px") as SetterFn;
     setY.current = gsap.quickSetter(el, "--y", "px") as SetterFn;
+
     const { width, height } = el.getBoundingClientRect();
     pos.current = { x: width / 2, y: height / 2 };
     setX.current(pos.current.x);
@@ -125,6 +130,7 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
+
     card.style.setProperty("--mouse-x", `${x}px`);
     card.style.setProperty("--mouse-y", `${y}px`);
   };
@@ -132,7 +138,7 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
   return (
     <div
       ref={rootRef}
-      className={`chroma-grid ${className}`}
+      className={`relative w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto justify-center gap-4 max-w-7xl p-4 box-border ${className}`}
       style={
         {
           "--r": `${radius}px`,
@@ -146,30 +152,126 @@ export const ChromaGrid: React.FC<ChromaGridProps> = ({
       {data.map((c, i) => (
         <article
           key={i}
-          className="chroma-card"
+          className={`
+            relative flex flex-col w-full max-w-full h-auto rounded-2xl overflow-hidden 
+            border border-slate-700 transition-all duration-300 mt-5
+            ${c.url ? "cursor-pointer" : "cursor-default"}
+            hover:border-opacity-100
+            before:content-[''] before:absolute before:inset-0 before:pointer-events-none 
+            before:opacity-0 before:transition-opacity before:duration-500 before:z-10
+            hover:before:opacity-100
+          `}
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c.url)}
           style={
             {
               "--card-border": c.borderColor || "transparent",
               "--card-gradient": c.gradient,
-              cursor: c.url ? "pointer" : "default",
+              background: c.gradient,
+              borderColor: c.borderColor,
             } as React.CSSProperties
           }
         >
-          <div className="chroma-img-wrapper">
-            <img src={c.image} alt={c.title} loading="lazy" />
+          {/* Spotlight Effect */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-500 z-10 hover:opacity-100"
+            style={{
+              background: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.3), transparent 70%)`,
+            }}
+          />
+
+          {/* Image Wrapper */}
+          <div className="relative z-[1] flex-1 p-2.5 box-border bg-transparent transition-colors duration-300">
+            <Image
+              src={c.image || "/placeholder.svg"}
+              alt={c.title}
+              width={300}
+              height={300}
+              loading="lazy"
+              className="w-full h-auto object-cover rounded-lg block"
+            />
           </div>
-          <footer className="chroma-info">
-            <h3 className="name">{c.title}</h3>
-            {c.handle && <span className="handle">{c.handle}</span>}
-            <p className="role">{c.subtitle}</p>
-            {c.location && <span className="location">{c.location}</span>}
+
+          {/* Info Footer */}
+          <footer className="relative z-[1] p-3 px-4 text-white font-sans grid grid-cols-[1fr_auto] gap-y-1 gap-x-3">
+            <h3 className="font-semibold text-base leading-tight">{c.title}</h3>
+            {c.handle && (
+              <span className="text-slate-400 text-sm">{c.handle}</span>
+            )}
+            <p className="text-slate-400 text-sm col-span-2">{c.subtitle}</p>
+            {c.location && (
+              <span className="text-slate-400 text-sm col-span-2">
+                {c.location}
+              </span>
+            )}
           </footer>
         </article>
       ))}
-      <div className="chroma-overlay" />
-      <div ref={fadeRef} className="chroma-fade" />
+
+      {/* Overlay Effect */}
+      <div
+        ref={fadeRef}
+        className="absolute inset-0 pointer-events-none z-30 opacity-100 transition-opacity duration-300"
+        style={{
+          backdropFilter: "grayscale(1) brightness(0.78)",
+          WebkitBackdropFilter: "grayscale(1) brightness(0.78)",
+          background: "rgba(0, 0, 0, 0.001)",
+          maskImage: `radial-gradient(
+            circle var(--r) at var(--x) var(--y),
+            transparent 0%,
+            transparent 15%,
+            rgba(0, 0, 0, 0.1) 30%,
+            rgba(0, 0, 0, 0.22) 45%,
+            rgba(0, 0, 0, 0.35) 60%,
+            rgba(0, 0, 0, 0.5) 75%,
+            rgba(0, 0, 0, 0.68) 88%,
+            white 100%
+          )`,
+          WebkitMaskImage: `radial-gradient(
+            circle var(--r) at var(--x) var(--y),
+            transparent 0%,
+            transparent 15%,
+            rgba(0, 0, 0, 0.1) 30%,
+            rgba(0, 0, 0, 0.22) 45%,
+            rgba(0, 0, 0, 0.35) 60%,
+            rgba(0, 0, 0, 0.5) 75%,
+            rgba(0, 0, 0, 0.68) 88%,
+            white 100%
+          )`,
+        }}
+      />
+
+      {/* Fade Effect */}
+      <div
+        className="absolute inset-0 pointer-events-none z-20"
+        style={{
+          backdropFilter: "grayscale(1) brightness(0.78)",
+          WebkitBackdropFilter: "grayscale(1) brightness(0.78)",
+          background: "rgba(0, 0, 0, 0.001)",
+          maskImage: `radial-gradient(
+            circle var(--r) at var(--x) var(--y),
+            white 0%,
+            white 15%,
+            rgba(255, 255, 255, 0.9) 30%,
+            rgba(255, 255, 255, 0.78) 45%,
+            rgba(255, 255, 255, 0.65) 60%,
+            rgba(255, 255, 255, 0.5) 75%,
+            rgba(255, 255, 255, 0.32) 88%,
+            transparent 100%
+          )`,
+          WebkitMaskImage: `radial-gradient(
+            circle var(--r) at var(--x) var(--y),
+            white 0%,
+            white 15%,
+            rgba(255, 255, 255, 0.9) 30%,
+            rgba(255, 255, 255, 0.78) 45%,
+            rgba(255, 255, 255, 0.65) 60%,
+            rgba(255, 255, 255, 0.5) 75%,
+            rgba(255, 255, 255, 0.32) 88%,
+            transparent 100%
+          )`,
+        }}
+      />
     </div>
   );
 };

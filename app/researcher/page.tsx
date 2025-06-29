@@ -425,7 +425,7 @@ export default function ResearchPage() {
 
         {/* Researchers Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-20">
-          {filteredResearchers.map((researcher, index) => (
+          {filteredResearchers.map((researcher) => (
             <AnimatedOnScroll key={researcher.id}>
               <div className="group bg-slate-900/80 border border-slate-700/50 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2">
                 {/* Header with Photo and Basic Info */}

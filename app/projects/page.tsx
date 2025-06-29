@@ -183,7 +183,6 @@ const projects = [
 
 // Placeholder Background Component for projects without images
 const ProjectPlaceholder = ({
-  title,
   category,
 }: {
   title: string;
@@ -315,7 +314,7 @@ export default function ProjectsPage() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-20">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <AnimatedOnScroll key={project.id}>
               <div
                 className={`group relative overflow-hidden border rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${project.cardBg} hover:shadow-purple-500/10`}

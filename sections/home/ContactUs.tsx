@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import GradientText from "@/components/GradientText";
 import AnimatedOnScroll from "@/components/AnimatedOnScroll";
 import { ExternalLink, BookOpen, Calendar, Users } from "lucide-react";
@@ -81,17 +81,23 @@ export default function ContactUs() {
               </div>
             </AnimatedOnScroll>
 
-            <div className="button-container-contact mt-10 sm:mt-12 flex flex-col sm:flex-row gap-6 sm:gap-8">
+            <div className="button-container-contact mt-10 sm:mt-12 flex flex-col sm:flex-row gap-5 sm:gap-4">
               <AnimatedOnScroll>
-                <button className="button-contact-us bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg cursor-pointer transition-colors duration-200 font-medium">
+                <Link
+                  href={"/about"}
+                  className="button-contact-us bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg cursor-pointer transition-colors duration-200 font-medium"
+                >
                   Tentang kami
-                </button>
+                </Link>
               </AnimatedOnScroll>
 
               <AnimatedOnScroll>
-                <button className="button-explore-contact border border-white text-white px-6 py-3 rounded-lg cursor-pointer transition-colors duration-200 hover:bg-white/10 font-medium">
+                <Link
+                  href={"/projects"}
+                  className="button-explore-contact border border-white text-white px-6 py-3 rounded-lg cursor-pointer transition-colors duration-200 hover:bg-white/10 font-medium"
+                >
                   Portofolio kami
-                </button>
+                </Link>
               </AnimatedOnScroll>
             </div>
           </div>
@@ -112,7 +118,7 @@ export default function ContactUs() {
                 </p>
 
                 <div className="space-y-4">
-                  {journalLinks.map((journal, index) => (
+                  {journalLinks.map((journal) => (
                     <AnimatedOnScroll key={journal.name}>
                       <a
                         href={journal.url}

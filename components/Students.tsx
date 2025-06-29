@@ -1,7 +1,7 @@
 "use client";
 
-import { div } from "framer-motion/client";
-import { GraduationCap, Users, Search, BookOpen } from "lucide-react";
+"framer-motion/client";
+import {  Users, Search,  } from "lucide-react";
 import { useState } from "react";
 
 export default function Students() {
@@ -279,8 +279,8 @@ export default function Students() {
                 <div className="p-8 text-center text-gray-500">
                   <Search className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                   <p>
-                    Tidak ada mahasiswa yang ditemukan dengan kata kunci "
-                    {searchTerm}"
+                    Tidak ada mahasiswa yang ditemukan dengan kata kunci
+                    {searchTerm}
                   </p>
                   {selectedJenjang !== "Semua" && (
                     <p className="text-sm mt-2">Filter: {selectedJenjang}</p>

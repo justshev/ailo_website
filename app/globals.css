@@ -676,4 +676,10 @@ body {
   .main-title-hero {
     margin-top: 20px;
   }
+
+  .ourteam-pages-maintitle {
+    font-size: 3rem;
+    line-height: 50px;
+    max-width: 70%;
+  }
 }

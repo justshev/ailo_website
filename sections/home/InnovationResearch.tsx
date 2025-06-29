@@ -9,7 +9,6 @@ import {
   Cpu,
   Zap,
   ArrowRight,
-  Play,
 } from "lucide-react";
 import Link from "next/link";
 const researchAreas = [
@@ -141,7 +140,7 @@ export default function InnovationResearch() {
             {/* Research Areas Grid */}
             <AnimatedOnScroll>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
-                {researchAreas.map((area, index) => (
+                {researchAreas.map((area) => (
                   <AnimatedOnScroll key={area.title}>
                     <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                       <div className="flex items-start space-x-4">

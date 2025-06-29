@@ -682,4 +682,9 @@ body {
     line-height: 50px;
     max-width: 70%;
   }
+
+  .our-team-title {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
 }

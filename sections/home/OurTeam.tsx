@@ -12,7 +12,7 @@ export default function OurTeam() {
         </div>
         <div className="our-team-content-text">
           <div className="our-team-title">
-            <span>Kenali </span>
+            <span>Anggota </span>
             <GradientText
               colors={["#4079ff", "#4079ff", "#ffffff", "#4079ff", "#4079ff"]}
               showBorder={false}

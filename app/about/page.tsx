@@ -295,23 +295,26 @@ export default function AboutPage() {
                       <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                       <div>
                         <p className="text-white font-medium">
-                          Gedung Riset AI
+                          Gedung Telkom University
                         </p>
                         <p className="text-slate-400">
-                          Jl. Teknologi No. 123, Jakarta Selatan
+                          Telkom University, Gedung D Jl.Telekomunikasi Terusan
+                          Buah Batu
                         </p>
                         <p className="text-slate-400">
-                          DKI Jakarta 12345, Indonesia
+                          Bandung 40257, Indonesia
                         </p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="w-5 h-5 text-purple-400" />
-                      <span className="text-slate-300">+62 21 1234 5678</span>
+                      <span className="text-slate-300">+62 821-1698-4458</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="w-5 h-5 text-purple-400" />
-                      <span className="text-slate-300">info@airesearch.id</span>
+                      <span className="text-slate-300">
+                        ailo@telkomuniversity.ac.id
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Globe className="w-5 h-5 text-purple-400" />
@@ -323,7 +326,7 @@ export default function AboutPage() {
                 {/* Google Maps Embed */}
                 <div className="h-80 rounded-xl overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.2087634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1703123456789!5m2!1sen!2sid"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.304448019412!2d107.63034599999999!3d-6.9733626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adf177bf8d%3A0x437398556f9fa03!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1751246591588!5m2!1sen!2sid"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -364,7 +367,9 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <p className="text-white font-medium">Email</p>
-                        <p className="text-slate-400">research@airesearch.id</p>
+                        <p className="text-slate-400">
+                          ailo@telkomuniversity.ac.id
+                        </p>
                       </div>
                     </div>
 
@@ -374,7 +379,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <p className="text-white font-medium">Telepon</p>
-                        <p className="text-slate-400">+62 21 1234 5678</p>
+                        <p className="text-slate-400">+62 821-1698-4458</p>
                       </div>
                     </div>
 

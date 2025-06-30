@@ -12,12 +12,12 @@
 ## ✨ Fitur Utama
 
 - **Antarmuka Pengguna yang Responsif:** Situs web dirancang agar responsif dan mudah digunakan di berbagai perangkat, dari desktop hingga perangkat seluler.
-- **Galeri Multimedia yang Kaya:**  Menampilkan gambar, video, dan animasi untuk meningkatkan daya tarik visual dan penyampaian informasi.
-- **Animasi Halus:** Menggunakan perpustakaan animasi seperti Framer Motion dan GSAP untuk memberikan pengalaman pengguna yang lebih dinamis dan menarik.
-- **Komponen UI yang Dapat Digunakan Kembali:**  Menggunakan komponen React yang dirancang dengan baik dan terstruktur untuk memudahkan pemeliharaan dan skalabilitas.
-- **Navigasi Intuitif:**  Pengguna dapat dengan mudah menavigasi melalui berbagai bagian situs web berkat struktur navigasi yang jelas dan terorganisir.
-- **Integrasi Media Sosial:**  Kemungkinan integrasi dengan platform media sosial untuk memperluas jangkauan dan interaksi.
-- **Penggunaan Pustaka Lucide-React:** Penggunaan ikon dari pustaka Lucide-React untuk tampilan yang konsisten dan modern.
+- **Galeri Multimedia yang Kaya:** Menampilkan gambar, video, dan animasi untuk meningkatkan daya tarik visual dan penyampaian informasi.  Terlihat dari banyaknya aset media di direktori `public`.
+- **Animasi Halus:**  Penggunaan pustaka `framer-motion` dan `gsap`  menunjukkan adanya animasi halus pada elemen UI untuk meningkatkan pengalaman pengguna.
+- **Komponen UI yang Dapat Digunakan Kembali:** Struktur direktori `components` menunjukkan penggunaan komponen React yang dirancang dengan baik dan terstruktur untuk memudahkan pemeliharaan dan skalabilitas.
+- **Navigasi Intuitif:**  Struktur direktori `app` yang terorganisir dengan baik (misalnya, `about`, `projects`, `publications`, `researcher`, `teams`) menunjukkan navigasi yang intuitif dan terstruktur dengan baik.
+- **Integrasi Media Sosial:**  Meskipun tidak secara eksplisit terlihat dalam kode, kemungkinan integrasi dengan platform media sosial ada untuk memperluas jangkauan dan interaksi.
+- **Penggunaan Ikon Lucide-React:** Penggunaan `lucide-react` memastikan tampilan ikon yang konsisten dan modern di seluruh situs web.
 
 
 ## 🛠️ Tumpukan Teknologi
@@ -35,7 +35,7 @@
 
 ## 🏛️ Tinjauan Arsitektur
 
-Situs web ini dibangun menggunakan arsitektur berbasis komponen yang mengikuti prinsip-prinsip Next.js.  Komponen-komponen UI yang modular dan dapat digunakan kembali dikelompokkan di dalam direktori `components`.  Struktur berorientasi halaman memungkinkan pengelolaan dan pemeliharaan kode yang efektif.  Aset statis seperti gambar dan video disimpan di dalam direktori `public`.
+Situs web ini dibangun menggunakan arsitektur berbasis komponen yang mengikuti prinsip-prinsip Next.js.  Komponen-komponen UI yang modular dan dapat digunakan kembali dikelompokkan di dalam direktori `components`.  Struktur berorientasi halaman dalam direktori `app` memungkinkan pengelolaan dan pemeliharaan kode yang efektif.  Aset statis seperti gambar dan video disimpan di dalam direktori `public`.
 
 ## 🚀 Memulai
 
@@ -55,8 +55,3 @@ Situs web ini dibangun menggunakan arsitektur berbasis komponen yang mengikuti p
    ```bash
    npm run dev
    ```
-
-
-
-
-
